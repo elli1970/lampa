@@ -11,10 +11,18 @@
   function lightoff(){
   document.querySelector("#mylamp").src="bulboff.gif";
   }
+  function myswitch(){
+  var lampa=document.querySelector("#mylamp");
+  if (lampa.src.indexOf("bulbon.gif")!==-1) {
+      lampa.src="bulboff.gif"
+  }
+  else{
+      lampa.src="bulbon.gif"
+  }
+  }
   </script>
-  
  </head>
  <body>
- <img src="bulboff.gif" id="mylamp" onmousedown="lighton()" onmouseup="lightoff()">
+ <img src="bulboff.gif" id="mylamp" onclick="myswitch()">
  </body>
  </html>
